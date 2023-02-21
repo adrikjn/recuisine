@@ -1,6 +1,6 @@
 <h1 class="text-center mt-5">Connexion</h1>
 
-<form action="f" method="POST">
+<form action="assets/lib/traitement-login.php" method="POST">
     <div class="row mt-5">
         <div class="col-3 offset-3">
             <input type="text" name="login" placeholder="login" id="login" class="form-control">
