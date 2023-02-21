@@ -51,6 +51,9 @@ session_start(); // formulaire = je prépare le terrain
     
     <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "recette") : ?>
         <?php require "assets/views/public/recette.php"?>
+    
+        <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "login") : ?>
+        <?php require "assets/views/public/login.php" ?>
 
     <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "contact") : ?>
         <?php require "assets/views/public/contact.php" ?>
