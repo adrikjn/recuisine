@@ -36,7 +36,7 @@ session_start(); // formulaire = je prépare le terrain
                     <a class="nav-link" href="index.php?page=login">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a href="index.php?page=accueil&patie=privee" class="nav-link">TdB</a>
+                    <a href="index.php?page=accueil&partie=privee" class="nav-link">TdB</a>
                 </li>
             </ul>
         </nav>
@@ -58,7 +58,27 @@ session_start(); // formulaire = je prépare le terrain
     <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "mention") : ?>
         <?php require"assets/views/public/mentions-legales.php" ?>
 
+    
+    <!-- Rooting partie Privée -->
 
+    <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "accueil" && $_GET["partie"] === "privee") : ?>
+        <?php require "assets/views/private/profil.php" ?>
+
+    <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "accueil" && $_GET["partie"] === "privee") : ?>
+        <?php require "assets/views/private/gestionpage.php" ?>
+
+    <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "accueil" && $_GET["partie"] === "privee") : ?>
+        <?php require "assets/views/private/gestionrecette.php" ?>
+
+    <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "accueil" && $_GET["partie"] === "privee") : ?>
+        <?php require "assets/views/private/commentaire.php" ?>
+
+    <?php elseif(!empty($_GET["page"]) && !empty($_GET["partie"]) && $_GET["page"] === "accueil" && $_GET["partie"] === "privee")  : ?>
+        <?php require "assets/views/private/users.php"  ?>
+
+
+    <?php else : ?>
+        <?php require "assets/views/public/404.php" ?>
     <?php endif ?>
 
 
