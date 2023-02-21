@@ -16,10 +16,10 @@ session_start(); // formulaire = je prépare le terrain
 
 <body>
 
-    <!-- Routing dans le header -->
+    <!-- Header / Redirection link -->
     <header class="bg-dark">
         <nav class="navbar navbar-expand container navbar-dark flex-wrap">
-            <span class="navbar-brand">KitchenFood <small>EatGood => GetGood </small></span>
+            <span class="navbar-brand">KitchenFood <small>EatGood, GetGood </small></span>
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Accueil</a>
@@ -35,9 +35,35 @@ session_start(); // formulaire = je prépare le terrain
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?page=login">Login</a>
                 </li>
+                <li class="nav-item">
+                    <a href="index.php?page=accueil&patie=privee" class="nav-link">TdB</a>
+                </li>
             </ul>
         </nav>
     </header>
+
+    <section class="container">
+
+    <!-- Rooting partie Public -->
+
+    <?php if(empty($_GET)) : ?>
+        <?php require "assets/views/public/accueil.php" ?>
+    
+    <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "recette") : ?>
+        <?php require "assets/views/public/recette.php"?>
+
+    <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "contact") : ?>
+        <?php require "assets/views/public/contact.php" ?>
+
+    <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "mention") : ?>
+        <?php require"assets/views/public/mentions-legales.php" ?>
+
+
+    <?php endif ?>
+
+
+
+    </section>
 
 
 
