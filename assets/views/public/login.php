@@ -12,18 +12,4 @@
             <input type="submit" class="btn btn-outline-primary">
         </div>
     </div>
-    <?php if(!empty($_SESSION["message"])) : ?>
-    <?php if($_SESSION["message"]["alert"] === "success") : ?> 
-        <p class="alert alert-success" >
-            <?php echo $_SESSION["message"]["info"]  ?>
-        </p>
-    <?php elseif($_SESSION["message"]["alert"] === "danger") : ?> 
-        <p class="alert alert-danger">
-            <?php foreach($_SESSION["message"]["info"] as $i) : ?>
-                <?php echo $i  ?><br>
-            <?php endforeach ?>
-        </p>
-    <?php endif ?>
-<?php endif ?>
-
 </form>
