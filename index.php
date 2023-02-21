@@ -1,6 +1,9 @@
 <?php
-session_start(); // formulaire = je prépare le terrain
 // Faire le front à la fin.
+session_start(); // formulaire = je prépare le terrain
+
+define("WWW", "http://localhost/recuisine/index.php")
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,7 +55,7 @@ session_start(); // formulaire = je prépare le terrain
     <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "recette") : ?>
         <?php require "assets/views/public/recette.php"?>
     
-        <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "login") : ?>
+    <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "login") : ?>
         <?php require "assets/views/public/login.php" ?>
 
     <?php elseif(!empty($_GET["page"]) && $_GET["page"] === "contact") : ?>
